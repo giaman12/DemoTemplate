@@ -259,6 +259,54 @@
     border: 1px solid #ccc;
 }
 
+.tab-content .left-right{
+    display: flex;
+}
+.tab-content .left-right .left .image-container {
+    position: relative;
+    text-align: center;
+}
+.tab-content .left-right .left .image-container img{
+    
+    height: 500px;
+    margin-bottom: 50px;
+}
+.tab-content .left-right .left button{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.tab-content .left-right .left button:hover{
+    background-color: #0056b3;
+}
+.tab-content .left-right .right .container {
+    text-align: center;
+    margin-top: 50px;
+}
+.tab-content .left-right .right .container img{
+    
+    height: 600px;
+    margin-bottom: 50px;
+}
+.tab-content .left-right .right button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.tab-content .left-right .right button:hover{
+    background-color: #0056b3;
+}
+
+
+
 /* Thiết lập giao diện tab hiện tại */
 .active-tab {
     display: block;

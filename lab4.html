@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Flowers - Tourist</title>
+    <title>Flowers</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -132,8 +132,43 @@
         <p>Ví dụ, làm chức năng Quản lý Sinh viên, bao gồm tính năng thêm, sửa, xóa, tìm kiếm.</p>
         <p><strong style="color:red">Chú ý:</strong> <em>Các thành viên trong lớp, trong nhóm không được chọn các đối tượng giống nhau.</em></p>
     </div>
+
     <div id="tab2" class="tab-content">
-        <p>Nội dung tab 2</p>
+        <div class="left-right">
+            <div class="left" style="margin-left: 30px;">
+                <h1 style="font-size: 28px;">Design on paper</h1>
+            
+                <div class="image-container">
+                    <img src="./img/Giay.jpg" alt="Hình ảnh">
+                    <button class="download-button" data-image="./img/Giay.jpg">Download</button>
+                </div>
+            </div>
+
+            <div class="right" style="margin-left: 60px;">
+                <h2 style="font-size: 28px;">Design on figma</h2>
+                
+                <div class="container">
+                    <img src="./img/figma.jpg" alt="Hình ảnh">
+                    <br>
+                    <button class="download-button" data-image="./img/figma.jpg">Download</button>
+                    <br>
+                    <a href="https://www.figma.com/your-figma-link" style="font-size: 28px;">Go to Figma</a>
+                </div>
+                <script>
+                    document.querySelectorAll(".download-button").forEach(function(button) {
+                        button.addEventListener("click", function() {
+                            var imageSrc = this.getAttribute("data-image");
+                            var a = document.createElement("a");
+                            a.href = imageSrc;
+                            a.download = imageSrc;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                        });
+                    });
+                </script>
+            </div>
+        </div>
     </div>
     <div id="tab3" class="tab-content">
         <div class="container-xxl py-5">
