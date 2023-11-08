@@ -119,6 +119,7 @@
         margin-top: 15px;
         border-top: 1px solid #DDDDDD;
     }
+    
 
     .navbar-light .navbar-nav .nav-link,
     .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -223,23 +224,6 @@
 }
 
 
-/*** Service ***/
-.service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    transition: .5s;
-}
-
-.service-item:hover {
-    background: var(--primary);
-}
-
-.service-item * {
-    transition: .5s;
-}
-
-.service-item:hover * {
-    color: var(--light) !important;
-}
 
 
 /*** Destination ***/
@@ -252,18 +236,118 @@
 }
 
 
-/*** Package ***/
-.package-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+/*** Lab4 ***/
+.tabs {
+    display: flex;
+    background-color: white;
 }
 
-.package-item img {
-    transition: .5s;
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    background-color: white;
 }
 
-.package-item:hover img {
-    transform: scale(1.1);
+.tab-button:hover {
+    background-color: white;
 }
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Thiết lập giao diện tab hiện tại */
+.active-tab {
+    display: block;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 70%;
+    font-size: 16px;
+    margin-left: 110px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#search-btn:hover {
+    background-color: #3e8e41;
+}
+
+
+.row-count {
+    margin-right: 10px;
+    font-size: 14px;
+} 
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}   
+
+/* Định dạng kiểu dáng của nút "Add" */
+.add-button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    margin-left: 550px;
+    margin-top: 30px;
+}
+
+.add-button:hover {
+    background-color: #45a049; /* Màu nền khi hover */
+}
+
 
 
 /*** Booking ***/
