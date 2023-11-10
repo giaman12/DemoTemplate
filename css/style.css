@@ -341,6 +341,11 @@
 #search-btn:hover {
     background-color: #3e8e41;
 }
+#results {
+    margin-top: 20px;
+}
+
+
 
 
 .row-count {
@@ -380,6 +385,9 @@
     color: #666;
 }   
 
+
+
+
 /* Định dạng kiểu dáng của nút "Add" */
 .add-button {
     background-color: #4CAF50; 
@@ -393,9 +401,12 @@
 }
 
 .add-button:hover {
-    background-color: #45a049; /* Màu nền khi hover */
+    background-color: #45a049; 
 }
-
+#itemList {
+    margin-top: 20px;
+}
+  
 
 
 /*** Booking ***/

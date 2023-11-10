@@ -152,7 +152,7 @@
                     <br>
                     <button class="download-button" data-image="./img/figma.jpg">Download</button>
                     <br>
-                    <a href="https://www.figma.com/your-figma-link" style="font-size: 28px;">Go to Figma</a>
+                    <a href="https://www.figma.com/file/BQJht0QKdZOyXZNLLNN7Fx/Untitled?type=design&node-id=0%3A1&mode=design&t=QaJPJrNHfDuiT09G-1" style="font-size: 28px;">Go to Figma</a>
                 </div>
                 <script>
                     document.querySelectorAll(".download-button").forEach(function(button) {
@@ -183,14 +183,53 @@
                         <button id="search-btn">Search</button>
                     </div>
 
+                    <div id="results"></div>
+
+                    <script>
+                        function searchProduct() {
+                        // Lấy giá trị từ ô nhập liệu
+                        var searchTerm = document.getElementById("productSearch").value;
+
+                        // Giả sử có một mảng dữ liệu sản phẩm
+                        var products = ["Hoa Cẩm Tú Cầu", "Hoa Hồng", "Hoa Mẫu Đơn", "Hoa Hướng Dương", "Hoa Cẩm Chướng"];
+
+                        // Tìm kiếm trong mảng dữ liệu
+                        var searchResults = products.filter(function(product) {
+                        return product.toLowerCase().includes(searchTerm.toLowerCase());
+                        });
+
+                        // Hiển thị kết quả
+                        displayResults(searchResults);
+                    }
+
+                        function displayResults(results) {
+                        var resultsContainer = document.getElementById("results");
+                        resultsContainer.innerHTML = ""; // Xóa nội dung cũ
+
+                        if (results.length > 0) {
+                        // Nếu có kết quả, hiển thị danh sách sản phẩm
+                        var ul = document.createElement("ul");
+                        results.forEach(function(result) {
+                        var li = document.createElement("li");
+                        li.textContent = result;
+                        ul.appendChild(li);
+                        });
+                        resultsContainer.appendChild(ul);
+                        } else {
+                        // Nếu không có kết quả, hiển thị thông báo
+                        resultsContainer.textContent = "Không tìm thấy sản phẩm nào.";
+                        }
+                    }
+                    </script>
+
                     <div class="card-container">
                         <div class="card">
                             <img src="./img/camtucau.jpg">
-                            <h3>Hoa Cẩm Tú Cầu</h3>
-                            <p style="color: gray;">Hoa cẩm tú cầu thường tượng trưng cho sự tươi sáng, vui vẻ và sự háo hức với cuộc sống. Màu sắc tươi sáng và mùi hương đặc trưng của hoa cẩm tú cầu thường làm cho nó trở thành biểu tượng của niềm vui và sự phấn khích. Nó còn là biểu tượng của may mắn và sự bình an.<br>
+                            <h3 id="productName1">Hoa Cẩm Tú Cầu</h3>
+                            <p id="productDescription1" style="color: gray;">Hoa cẩm tú cầu thường tượng trưng cho sự tươi sáng, vui vẻ và sự háo hức với cuộc sống. Màu sắc tươi sáng và mùi hương đặc trưng của hoa cẩm tú cầu thường làm cho nó trở thành biểu tượng của niềm vui và sự phấn khích. Nó còn là biểu tượng của may mắn và sự bình an.<br>
                                 Hoa cẩm tú cầu thường có mùi hương mạnh mẽ và đặc trưng, có thể được mô tả như mùi hương đất và hương thảo.</p>
-                            <p style="color: black; font-size: 20px;">Giá: 15000đ</p>
-                            <p style="color: black; font-size: 20px;">Số lượng còn lại: 5</p>
+                            <p id="productPrice1" style="color: black; font-size: 20px;">Giá: 15000đ</p>
+                            <p id="productStock1" style="color: black; font-size: 20px;">Số lượng còn lại: 5</p>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
@@ -200,17 +239,20 @@
                             </div>
                             
                             <div class="d-flex justify-content-center mb-2">
-                                <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Edit</a>
-                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Delete</a>
+                                
+                                <button id="editButton" class="btn btn-sm btn-primary px-3 border-end" >Edit</button>
+                                <button id="deleteButton" class="btn btn-sm btn-primary px-3" >Delete</button>
                             </div>
                         </div>
+                        
+
                         <div class="card">
                             <img src="./img/hoahong.jpg">
-                            <h3>Hoa Hồng</h3>
-                            <p style="color: gray;">Hoa hồng là biểu tượng của tình yêu và đam mê. Màu sắc của hoa hồng có thể thể hiện sự tình cảm khác nhau, ví dụ, hoa hồng đỏ thường biểu thị tình yêu đam mê, trong khi hoa hồng hồng thường biểu thị tình bạn và hoa hồng trắng biểu thị tình yêu trong sáng và trung thành.<br>
+                            <h3 id="productName2">Hoa Hồng</h3>
+                            <p id="productDescription2" style="color: gray;">Hoa hồng là biểu tượng của tình yêu và đam mê. Màu sắc của hoa hồng có thể thể hiện sự tình cảm khác nhau, ví dụ, hoa hồng đỏ thường biểu thị tình yêu đam mê, trong khi hoa hồng hồng thường biểu thị tình bạn và hoa hồng trắng biểu thị tình yêu trong sáng và trung thành.<br>
                                 Mùi của hoa hồng có thể từ nhẹ nhàng và ngọt ngào đến đậm đà và quyến rũ.</p>
-                            <p style="color: black; font-size: 20px;">Giá: 10000đ</p>
-                            <p style="color: black; font-size: 20px;">Số lượng còn lại: 10</p>
+                            <p id="productPrice2" style="color: black; font-size: 20px;">Giá: 10000đ</p>
+                            <p id="productStock2" style="color: black; font-size: 20px;">Số lượng còn lại: 10</p>
 
                         <div class="mb-3">
                             <small class="fa fa-star text-primary"></small>
@@ -221,17 +263,21 @@
                         </div>
       
                             <div class="d-flex justify-content-center mb-2">
-                                <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Edit</a>
-                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Delete</a>
+                                <button id="editButton" class="btn btn-sm btn-primary px-3 border-end" >Edit</button>
+                                <button id="deleteButton" class="btn btn-sm btn-primary px-3" >Delete</button>
                             </div>
                         </div>
+
+                        
+                        
+
                         <div class="card">
                             <img src="./img/huongduong.jpg">
-                            <h3>Hoa Hướng Dương</h3>
-                            <p style="color: gray;">Hoa hướng dương thường tượng trưng cho năng lượng mặt trời, sự lạc quan và lòng kiên nhẫn. Cây hướng dương luôn quay về hướng mặt trời (từ đó có tên gọi là "hướng dương") và thể hiện tinh thần lạc quan và hy vọng.<br>
+                            <h3 id="productName3">Hoa Hướng Dương</h3>
+                            <p id="productDescription3" style="color: gray;">Hoa hướng dương thường tượng trưng cho năng lượng mặt trời, sự lạc quan và lòng kiên nhẫn. Cây hướng dương luôn quay về hướng mặt trời (từ đó có tên gọi là "hướng dương") và thể hiện tinh thần lạc quan và hy vọng.<br>
                                 Hoa hướng dương thường không có mùi hương đặc trưng. Thay vào đó, chúng được biết đến với hương của lá và thân cây.</p>
-                            <p style="color: black; font-size: 20px;">Giá: 8000đ</p>
-                            <p style="color: black; font-size: 20px;">Số lượng còn lại: 2</p>
+                            <p id="productPrice3" style="color: black; font-size: 20px;">Giá: 8000đ</p>
+                            <p id="productStock3" style="color: black; font-size: 20px;">Số lượng còn lại: 2</p>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
@@ -241,55 +287,132 @@
                             </div>
                             
                             <div class="d-flex justify-content-center mb-2">
-                                <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Edit</a>
-                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Delete</a>
+                                <button id="editButton" class="btn btn-sm btn-primary px-3 border-end" >Edit</button>
+                                <button id="deleteButton" class="btn btn-sm btn-primary px-3" >Delete</button>
                             </div>
                         </div>
+
+                        
+
 
                         <div class="card">
                             <img src="./img/camchuong.jpg">
-                            <h3>Hoa Cẩm Chướng</h3>
-                            <p style="color: gray;">Hoa cẩm chướng thường tượng trưng cho sự tự tin, quyết tâm và tinh thần kiên nhẫn. Vẻ đẹp của nó và dáng vẻ cao ráo thường được coi là biểu tượng của sự mạnh mẽ và tự tin. Nó cũng có thể tượng trưng cho sự tôn kính và sự giúp đỡ. <br>
+                            <h3 id="productName4" >Hoa Cẩm Chướng</h3>
+                            <p id="productDescription4" style="color: gray;">Hoa cẩm chướng thường tượng trưng cho sự tự tin, quyết tâm và tinh thần kiên nhẫn. Vẻ đẹp của nó và dáng vẻ cao ráo thường được coi là biểu tượng của sự mạnh mẽ và tự tin. Nó cũng có thể tượng trưng cho sự tôn kính và sự giúp đỡ. <br>
                                 Hoa cẩm chướng thường không có mùi hương đặc trưng. Thay vào đó, chúng được biết đến với vẻ đẹp màu sắc và dáng vẻ hấp dẫn.</p>
-                            <p style="color: black; font-size: 20px;">Giá: 50000đ</p>
-                            <p style="color: black; font-size: 20px;">Số lượng còn lại: 100</p>
+                            <p id="productPrice4" style="color: black; font-size: 20px;">Giá: 50000đ</p>
+                            <p id="productStock4" style="color: black; font-size: 20px;">Số lượng còn lại: 100</p>
                             <div class="mb-3">
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
                                 <small class="fa fa-star text-primary"></small>
-                                
                             </div>
                             
                             <div class="d-flex justify-content-center mb-2">
-                                <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Edit</a>
-                                <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Delete</a>
+                                <button id="editButton" class="btn btn-sm btn-primary px-3 border-end" >Edit</button>
+                                <button id="deleteButton" class="btn btn-sm btn-primary px-3" >Delete</button>
                             </div>
                         </div>
 
+                        
+
                         <div class="card">
                             <img src="./img/maudon.jpg">
-                            <h3>Hoa Mẫu Đơn</h3>
-                            <p style="color: gray;">Hoa mẫu đơn đỏ thường tượng trưng cho tình yêu đam mê và lời tỏ tình chân thành. Nó là biểu tượng tình yêu cuồng nhiệt và quyến rũ.<br>
+                            <h3 id="productName5">Hoa Mẫu Đơn</h3>
+                            <p id="productDescription5" style="color: gray;">Hoa mẫu đơn đỏ thường tượng trưng cho tình yêu đam mê và lời tỏ tình chân thành. Nó là biểu tượng tình yêu cuồng nhiệt và quyến rũ.<br>
                                 Mùi của hoa mẫu đơn có thể từ nhẹ nhàng và ngọt ngào đến đậm đà và lôi cuốn.</p>
-                            <p style="color: black; font-size: 20px;">Giá: 20000đ</p>
-                            <p style="color: black; font-size: 20px;">Số lượng còn lại: 40</p>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            
-                        </div>
+                            <p id="productPrice5" style="color: black; font-size: 20px;">Giá: 20000đ</p>
+                            <p id="productStock5" style="color: black; font-size: 20px;">Số lượng còn lại: 40</p>
+                            <div class="mb-3">
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                                <small class="fa fa-star text-primary"></small>
+                            </div>
                         
-                        <div class="d-flex justify-content-center mb-2">
-                            <a href="#" class="btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Edit</a>
-                            <a href="#" class="btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Delete</a>
+                            <div class="d-flex justify-content-center mb-2">
+                                <button id="editButton" class="btn btn-sm btn-primary px-3 border-end" >Edit</button>
+                                <button id="deleteButton" class="btn btn-sm btn-primary px-3" >Delete</button>
+                            </div>
                         </div>
-
-                        
-                    </div>
                 </div>
+                <!--Edit-->
+                <script>
+                    function enableEditing(productName, productDescription, productPrice, productStock) {
+                      productName.contentEditable = true;
+                      productDescription.contentEditable = true;
+                      productPrice.contentEditable = true;
+                      productStock.contentEditable = true;
+                    }
+                
+                    function disableEditing(productName, productDescription, productPrice, productStock) {
+                      productName.contentEditable = false;
+                      productDescription.contentEditable = false;
+                      productPrice.contentEditable = false;
+                      productStock.contentEditable = false;
+                    }
+                
+                    var editButtons = document.querySelectorAll("[id^='editButton']");
+                    var productNames = document.querySelectorAll("[id^='productName']");
+                    var productDescriptions = document.querySelectorAll("[id^='productDescription']");
+                    var productPrices = document.querySelectorAll("[id^='productPrice']");
+                    var productStocks = document.querySelectorAll("[id^='productStock']");
+                
+                    for (var i = 0; i < editButtons.length; i++) {
+                      editButtons[i].addEventListener("click", function() {
+                        var index = i;
+                        return function() {
+                          if (editButtons[index].textContent === "Edit") {
+                            enableEditing(productNames[index], productDescriptions[index], productPrices[index], productStocks[index]);
+                            editButtons[index].textContent = "Save";
+                          } else {
+                            disableEditing(productNames[index], productDescriptions[index], productPrices[index], productStocks[index]);
+                            editButtons[index].textContent = "Edit";
+                          }
+                        };
+                      }());
+                    }
+                  </script>
+            <!--kết thúc phần edit-->
+
+                <!--Delete-->
+                <script>
+                    // Lấy tham chiếu đến tất cả các nút "Delete"
+                    const deleteButtons = document.querySelectorAll('#deleteButton');
+
+                    // Lặp qua từng nút "Delete" và thêm sự kiện click cho mỗi nút
+                    deleteButtons.forEach(function (deleteButton) {
+                    deleteButton.addEventListener('click', function () {
+                    // Lấy tham chiếu đến phần tử cha (div.card) của nút "Delete" được nhấp
+                    const card = deleteButton.closest('.card');
+
+                    // Kiểm tra nếu phần tử tồn tại, sau đó xóa nó
+                    if (card) {
+                        card.remove();
+                    }
+                    });
+                    });
+                </script>
+            <!--Kết thúc phần delete-->
+        
+
+            <!--Tạo nút Add-->
+
                 <button id="addButton" class="add-button">Add</button>
+                <input id="itemInput" type="text" placeholder="Nội dung...">
+                <ul id="itemList"></ul>
+
+                <script>
+                    // JavaScript để thực thi khi nút Add được nhấn
+                    document.getElementById("addButton").addEventListener("click", function() {
+                        var itemList = document.getElementById("itemList");
+                        var itemInput = document.getElementById("itemInput");
+                        var newItem = document.createElement("li");
+                        newItem.textContent = itemInput.value; // Lấy giá trị từ trường nhập liệu
+                        itemList.appendChild(newItem);
+                        itemInput.value = ''; // Xóa trường nhập liệu sau khi thêm vào danh sách
+                    });
+                </script>
             </div>
         </div>
         <!-- Implement End -->
