@@ -87,11 +87,9 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="destination.html" class="dropdown-item">Destination</a>
-                            <a href="booking.html" class="dropdown-item">Booking</a>
+                            
                             <a href="team.html" class="dropdown-item">Travel Guides</a>
-                            <!--<a href="testimonial.html" class="dropdown-item">Testimonial</a>-->
-                            <a href="404.html" class="dropdown-item">404 Page</a>
+                            
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -120,19 +118,15 @@
     <!-- Navbar & Hero End -->
 
     <!--Lab 5 Start-->
+    
+
+    <!--Lab 5 end-->
     <div class="contabs">
-        <!--<button class="tab" onclick="changeTab(1)" style="font-size: 30px; font-weight: bold;">Requirment</button>-->
         <button class="tab" onclick="changeTab(1)" style="font-size: 24px; font-weight: bold;">User Scenario</button>
         <button class="tab" onclick="changeTab(2)" style="font-size: 24px; font-weight: bold;">Design</button>
         <button class="tab" onclick="changeTab(3)" style="font-size: 24px; font-weight: bold;">Implement</button>
     </div>
-    
-    
-    <!--<div id="contentTab1" class="content" style="color:rgba(50, 48, 48, 0.759)">
-        <p>(1) Tạo ra một user scenario</p>
-        <p>(2) Chọn 1 bước trong user scenario để thiết kế 1 form giao diện Web trên công cụ thiết kế đã chọn. Sau đó thiết kế trên Figma rồi chuyển sang html tương ứng cho thiết kế này.</p>
-        <p>Upload lên github: trong file html có chèn hình ảnh của user scenario ở (1) và đường dẫn của file thiết kế ở (2).</p>
-    </div>-->
+   
 
     <div id="contentTab1" class="content">
         <h3 style="text-align: center; color: blue">User Scenario</h3>
@@ -145,7 +139,7 @@
             <p class="p5">Xem giỏ hàng và thanh toán</p>
         </div>
     </div>
-    
+
     <div id="contentTab2" class="content" style="margin-top: 25px;">
         <div class="left-right">
             <div class="left" style="margin-left: 30px;">
@@ -167,19 +161,6 @@
                     <br>-->
                     <a href="https://www.figma.com/file/Wq6PyiwVRGQICnFgJNFuXl/Lab5?type=design&node-id=0%3A1&mode=design&t=liPfiDKYAkdVwIs3-1" style="font-size: 28px;">Go to Figma</a>
                 </div>
-                <script>
-                    document.querySelectorAll(".download-button").forEach(function(button) {
-                        button.addEventListener("click", function() {
-                            var imageSrc = this.getAttribute("data-image");
-                            var a = document.createElement("a");
-                            a.href = imageSrc;
-                            a.download = imageSrc;
-                            document.body.appendChild(a);
-                            a.click();
-                            document.body.removeChild(a);
-                        });
-                    });
-                </script>
             </div>
         </div>
     </div>
@@ -230,6 +211,7 @@
         
             </div>
         </div>
+    </div>
 
 
         <script>
@@ -282,10 +264,9 @@
 
         </script>
 
-   
-   
-   
-   <script>
+
+    
+    <script>
         // JavaScript để thêm và xóa lớp "active" khi tab được nhấn
         function changeTab(tabNumber) {
             var tabs = document.querySelectorAll('.tab');
@@ -309,9 +290,8 @@
             selectedContent.classList.add('active');
         }
     </script>
-    <!--Lab 5 end-->
-
     <!-- Footer Start -->
+    <footer>
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -386,6 +366,7 @@
             </div>
         </div>
     </div>
+</footer>
     <!-- Footer End -->
 
 
