@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Flowers</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+        
+        .contab {
+          background-color: #eee;
+          padding: 10px;
+        }
+    
+        .tab {
+          cursor: pointer;
+          padding: 10px;
+          /*background-color: #ddd;*/
+          border: 1px solid #ccc;
+          font-size: 16px;
+          font-weight: bold;
+          border: none;
+          text-align: center;
+          margin-left: 40px;
+          
+        }
+    
+        .tab.active {
+          background-color: #3a46f6;
+        }
+    
+        .content {
+          display: none;
+          padding: 20px;
+        }
+    
+        .content.active {
+          display: block;
+        }
+        .tab.design-tab {
+            background-color: red;
+            color: white;
+        }
+
+        .tab-s1.active {
+            background-color: green;
+            color: white;
+        }
+      </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>Thành phố Hồ Chí Minh</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <h1 class="text-primary m-0"><i class="fa fa-map-marker-alt me-3"></i>Flowers</h1>
+                <!-- <img src="img/logo.png" alt="Logo"> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="lab4.html" class="nav-item nav-link ">Lab 4</a>
+                    <a href="lab5.html" class="nav-item nav-link ">Lab 5</a>
+                    <a href="lab6.html" class="nav-item nav-link active">Lab 6</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            
+                            <a href="team.html" class="dropdown-item">Travel Guides</a>
+                            
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <a href="" class="btn btn-primary rounded-pill py-2 px-4">Register</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+            <div class="container py-5">
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">Lab 6</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item text-white active" aria-current="page">Lab 6</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End -->
+    
+
+    <!--Lab 6 Start-->
+    <style>
+        
+        .header {
+            overflow: hidden;
+            background-color: #f1f1f1;
+            padding: 20px 10px;
+        }
+
+        /* Style the header links */
+        .header a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+
+        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* Change the background color on mouse-over */
+        .header a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Style the active/current link*/
+        .header a.active {
+            background-color: #2B66FF;
+            color: white;
+        }
+
+        /* Float the link section to the right */
+        .header-right {
+            float: right;
+        }
+
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+        @media screen and (max-width: 500px) {
+        .header a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        .header-right {
+            float: none;
+            }
+        }
+        .cons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .cons img {
+            width: 1160px;
+            height: 500px;
+        }
+
+        .cons .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .cons .content > div {
+            flex: 1;
+            margin: 0 10px; /* Khoảng cách giữa các phần tử */
+        }
+
+        .cons h4, .cons p {
+            /*flex: 1;*/
+            margin: 0;
+        }
+
+        .cons h4 {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .cons h4.center {
+            
+            margin-top: 10px;
+        }
+        .add-button {
+            border: none;
+            width: 140px;
+            background-color: #0ACE12;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            
+        }
+
+        .column img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .column:nth-child(odd) {
+            background-color: white; /* Màu nền của cột lẻ */
+        }
+
+        .column:nth-child(even) {
+            background-color: white; /* Màu nền của cột chẵn */
+
+        }
+
+        @media (max-width: 800px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        .tag_cloud_widget {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #fff;
+            max-width: 300px;
+        }
+
+        .single-sidebar-widget__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list li {
+            margin-bottom: 10px;
+        }
+
+        .list a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            display: block;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+
+        .list a:hover {
+            background-color: gray;
+        }
+
+        
+
+        
+    </style>
+
+
+    <div class="contab">
+        <button class="tab" onclick="changeMainTab(1)" style="font-size: 25px; margin-left: 50px;">Ex1</button>
+        <button class="tab" onclick="changeMainTab(2)" style="font-size: 25px;">Ex2</button>
+      </div>
+    
+      <div id="Ex1" class="content">
+        <button class="tab" onclick="changeSubTab(1, 'Design')">Design</button>
+        <button class="tab" onclick="changeSubTab(2, 'Implementation')">Implementation</button>
+        
+        <div id="Design-Ex1" class="sub-content">
+            <div class="left-right">
+                <div class="left" style="margin-left: 30px;">
+                    <h1 style="font-size: 22px; margin-top: 10px;">Design on paper</h1>
+                
+                    <div class="image-container">
+                        <img src="./img/giayEx1.jpg" alt="Hình ảnh" style="width: 500px;">
+                        <button class="download-button" data-image="./img/giayEx1.jpg" style="border: none; background-color: #007bff; color: white; padding: 10px 20px;">Download</button>
+                    </div>
+                </div>
+    
+                <div class="right" style="margin-left: 60px;">
+                    <h2 style="font-size: 22px;">Design on figma</h2>
+                    
+                    <div class="container">
+                        <img src="./img/figmaEx1.png" alt="Hình ảnh" style="width: 600px;">
+                        <br>
+                        <button class="download-button" data-image="./img/figmaEx1.jpg">Download</button>
+                        <br>
+                        <!--<a href="https://www.figma.com/file/Wq6PyiwVRGQICnFgJNFuXl/Lab5?type=design&node-id=0%3A1&mode=design&t=liPfiDKYAkdVwIs3-1" style="font-size: 28px;">Go to Figma</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="Implementation-Ex1" class="sub-content">
+            <div class="header" style="margin-top: 10px;">
+                <a href="#default" class="logo">F Layout</a>
+                <div class="header-right">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                  <a href="#sign-up">Sign Up</a>
+                </div>
+            </div>
+    
+            <div class="content-container" style="max-width: 1200px; border: 2px solid #749cee; color: rgba(0, 0, 0, 0.736); text-align: center; background-color: #8EEBFF; height: 40px; ">
+                <p style="margin-top: 6px;">This is a headline or mission statement for the website.</p>
+            </div>
+        
+            <div class="container" style="max-width: 1200px;  overflow: hidden;">
+                <div class="column" style="width: 230px; ">
+                    <img src="https://media.techcity.cloud/vietnam.vn/2023/05/hinh-anh-da-lat-mo-suong-sang-som_085718200-9.jpg" alt="">
+                </div>
+                <div class="column" style="width: 600px;">
+                    <h5>Giới thiệu về Đà Lạt</h5>
+                    <p style="color: rgba(0, 0, 0, 0.812);">Đà Lạt là một thành phố trực thuộc tỉnh và tỉnh lị tỉnh Lâm Đồng, nằm trên cao nguyên Lâm Viên, ở độ cao 1.500 m so với mặt nước biển và diện tích tự nhiên: 393,29 km². Đà Lạt được mệnh danh là : thành phố hoa, thành phố tình yêu, thành phố mùa xuân, thành phố sương mù.</p>
+                </div>
+                <div class="column" style="width: 300px;">
+                    <img src="https://khachsanthuha.com/wp-content/uploads/2019/03/thang-6-o-da-lat-co-hoa-gi-02.jpg">
+                </div>
+            </div>
+
+            <div class="container" style="max-width: 1200px;  overflow: hidden; margin-top: ;">
+                <div class="column" style="width: 230px; ">
+                    <img src="https://du-lich-da-lat.com/wp-content/uploads/2023/10/Da-Lat-hom-nay.jpeg" alt="">
+                </div>
+                <div class="column" style="width: 600px;">
+                    <h5>Vị trí địa lí</h5>
+                    <p style="color: rgba(0, 0, 0, 0.812);">Thành phố Đà Lạt nằm trong cao nguyên Lang Biang, phía Bắc tỉnh Lâm Đồng, Về phía Bắc, Đà Lạt giáp với huyện Lạc Dương, về phía Đông và Đông Nam giáp với huyện Đơn Dương, về phía Tây và Tây Nam giáp với hai huyện Lâm Hà và Đức Trọng.</p>
+                </div>
+                <div class="column" style="width: 300px;">
+                    <div class="single-sidebar-widget tag_cloud_widget">
+                        <h4 class="single-sidebar-widget__title">Từ khóa</h4>
+                        <ul class="list">
+                          <li>
+                            <a href="#">Du lịch Đà Lạt</a>
+                          </li>
+                          <li>
+                            <a href="#">mẹo du lịch</a>
+                          </li>
+                          <li>
+                            <a href="#">ăn uống</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <div id="Ex2" class="content">
+        <button class="tab" onclick="changeSubTab(1, 'Design')">Design</button>
+        <button class="tab" onclick="changeSubTab(2, 'Implementation')">Implementation</button>
+    
+        <div id="Design-Ex2" class="sub-content">
+            <div class="left-right">
+                <div class="left" style="margin-left: 30px;">
+                    <h1 style="font-size: 22px; ">Design on paper</h1>
+                
+                    <div class="image-container">
+                        <img src="./img/GiayEx2.jpg" alt="Hình ảnh" style="width: 500px;">
+                        <button class="download-button" data-image="./img/GiayEx2.jpg" style="border: none; background-color: #007bff; color: white; padding: 10px 20px;">Download</button>
+                    </div>
+                </div>
+    
+                <div class="right" style="margin-left: 60px;">
+                    <h2 style="font-size: 22px;">Design on figma</h2>
+                    
+                    <div class="container">
+                        <img src="./img/figmaEx2.png" alt="Hình ảnh" style="width: 600px;">
+                        <br>
+                        <button class="download-button" data-image="./img/figmaEx2.png">Download</button>
+                        <br>
+                        <!--<a href="https://www.figma.com/file/Wq6PyiwVRGQICnFgJNFuXl/Lab5?type=design&node-id=0%3A1&mode=design&t=liPfiDKYAkdVwIs3-1" style="font-size: 28px;">Go to Figma</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="Implementation-Ex2" class="sub-content">
+
+            <div class="header" style="margin-top: 10px;">
+                <a href="#default" class="logo">GM</a>
+                <div class="header-right">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a class="active" href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="cons">
+                <img src="./img/hinhEx2.jpg" style="width: 1160px; height: 500px;">
+                
+                <div class="content">
+                    <div>
+                        <h4 >Thông tin website</h4>
+                        <p style="color: black;">Được thành lập vào năm 2023.</p>
+                    </div>
+                    <div>
+                        <h4 class="center" >Giải trí</h4>
+                        <p style="color: black;">Mục đích: Giúp thư giãn đầu óc và mang lại niềm vui.</p>
+                    </div>
+                    <div>
+                        <button class="add-button" >SIGN UP</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+    
+    <script>
+        function changeMainTab(tabNumber) {
+          // Hide all main tab contents
+          document.querySelectorAll('.content').forEach(tab => tab.classList.remove('active'));
+          
+          // Deactivate all main tabs
+          document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+    
+          // Show the selected main tab content
+          document.getElementById('Ex' + tabNumber).classList.add('active');
+    
+          // Activate the selected main tab
+          document.querySelector('.contab .tab:nth-child(' + tabNumber + ')').classList.add('active');
+        }
+    
+        function changeSubTab(subTabNumber, subTabName) {
+          // Hide all sub-tab contents
+          document.querySelectorAll('.sub-content').forEach(subTab => subTab.style.display = 'none');
+          
+          // Deactivate all sub-tabs
+          document.querySelectorAll('.tab').forEach(subTab => subTab.classList.remove('active'));
+          
+          // Show the selected sub-tab content
+          const activeMainTab = document.querySelector('.content.active').id;
+          document.getElementById(`${subTabName}-${activeMainTab}`).style.display = 'block';
+    
+          // Activate the selected sub-tab
+          document.querySelector('.content.active .tab:nth-child(' + subTabNumber + ')').classList.add('active');
+        }
+    
+        // Set default main tab
+       // changeMainTab(1);//
+
+        // Set default sub-tab
+        changeSubTab(1, 'Design');
+    </script>
+
+    <script>
+        document.querySelectorAll(".download-button").forEach(function(button) {
+            button.addEventListener("click", function() {
+                var imageSrc = this.getAttribute("data-image");
+                var a = document.createElement("a");
+                a.href = imageSrc;
+                a.download = imageSrc;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            });
+        });
+    </script>
+
+      
+    
+   
+
+
+  
+
+    <!--Lab 6 end-->
+    
+
+
+    <!-- Footer Start -->
+    <footer>
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Company</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Thành phố Hồ Chí Minh</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/package-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/package-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Gia Man</a>, All Right Reserved.</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
