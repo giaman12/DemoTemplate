@@ -169,7 +169,6 @@
             padding: 20px 10px;
         }
 
-        /* Style the header links */
         .header a {
             float: left;
             color: black;
@@ -181,25 +180,25 @@
             border-radius: 4px;
         }
 
-        /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+        
         .header a.logo {
             font-size: 25px;
             font-weight: bold;
         }
 
-        /* Change the background color on mouse-over */
+        
         .header a:hover {
             background-color: #ddd;
             color: black;
         }
 
-        /* Style the active/current link*/
-        .header a.active {
+       
+        .header a .active {
             background-color: #2B66FF;
             color: white;
         }
 
-        /* Float the link section to the right */
+        
         .header-right {
             float: right;
         }
@@ -215,14 +214,6 @@
             float: none;
             }
         }
-
-        /*.container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }*/
 
         label {
             display: block;
@@ -242,7 +233,6 @@
             cursor: pointer;
             border: none;
             border-radius: 4px;
-            /*animation: scaleButton 0.3s ease-out;*/
             transition: background-color 5s ease-in-out;
         }
 
@@ -256,7 +246,7 @@
             100% { transform: scale(1.1); }
         }
 
-        /* Image Styling */
+      
         img {
             width: 150px;
             display: block;
@@ -276,16 +266,6 @@
             animation: slideInEffect 5s ease-out;
         }
 
-
-
-        /*.contact-form {
-            background-color: #fff;
-            padding: 60px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 500px;
-            margin-left: 450px;
-        }*/
 
         input, textarea {
             width: 100%;
@@ -370,44 +350,39 @@
         }
     </script>
 
-<div class="container">
-    <h2 style="margin-top: 15px;">Contact Us</h2>
-    <form id="contactForm">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required>
+    <div class="container">
+        <h2 style="margin-top: 15px;">Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-        <button type="button" onclick="submitContact()">Submit</button>
-        <div id="result2"></div>
-    </form>
-</div>
+            <button type="button" onclick="submitContact()">Submit</button>
+            <div id="result2"></div>
+        </form>
+    </div>
 
-<script>
-    function submitContact() {
-        // Lấy giá trị từ các input controls
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
+    <script>
+        function submitContact() {
+            // Lấy giá trị từ các input controls
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
 
-        // Hiển thị kết quả
-        var resultDiv = document.getElementById('result2');
-        resultDiv.innerHTML = 'Submitted: <br>' +
-            'Name: ' + name + '<br>' +
-            'Email: ' + email + '<br>' +
-            'Message: ' + message;
-    }
-</script>
+            // Hiển thị kết quả
+            var resultDiv = document.getElementById('result2');
+            resultDiv.innerHTML = 'Submitted: <br>' +
+                'Name: ' + name + '<br>' +
+                'Email: ' + email + '<br>' +
+                'Message: ' + message;
+        }
+    </script>
 
-
-
-
-    
-    
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
